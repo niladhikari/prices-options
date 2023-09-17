@@ -5,8 +5,6 @@ import PriceOptions from './Conponents/PriceOptions/PriceOptions'
 // import DaisyNav from './Conponents/DaisyNav/DaisyNav'
 
 function App() {
-
-
   return (
     <>
       {/* <DaisyNav></DaisyNav> */}
