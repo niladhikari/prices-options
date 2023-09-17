@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Link from "../Link/Link";
+import { AiOutlineMenu ,AiOutlineClose} from 'react-icons/ai';
 
 
 const Navbar = () => {
@@ -9,14 +11,26 @@ const Navbar = () => {
         { id: 4, path: '/contact', name: 'Contact' },
         { id: 5, path: '*', name: 'NotFound' }
     ];
+const [open,setOpen] = useState(false)
+
+
     return (
-        <div>
-            <ul className="md:flex">
+        <nav className="m-5 text-black p-6 bg-yellow-200">
+            <div className="md:hidden text-2xl" onClick={()=> setOpen(!open)}>
+                {
+                    open === true ? <AiOutlineClose className="text-2xl"></AiOutlineClose> 
+                    : <AiOutlineMenu></AiOutlineMenu>
+                }
+            </div>
+            
+            <ul className={`md:flex duration-1000 absolute md:static
+            ${open ? 'top-20': '-top-60'}
+            bg-yellow-200 px-6`}>
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
             </ul>
-        </div>
+        </nav>
     );
 };
 
