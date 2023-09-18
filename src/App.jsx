@@ -1,5 +1,8 @@
 
+
 import './App.css'
+import BarCart from './Conponents/BarChart/BarCart'
+import LineChart from './Conponents/LineChart/LineChart'
 import Navbar from './Conponents/Navbar/Navbar'
 import PriceOptions from './Conponents/PriceOptions/PriceOptions'
 // import DaisyNav from './Conponents/DaisyNav/DaisyNav'
@@ -11,7 +14,8 @@ function App() {
       <Navbar></Navbar>
       {/* <h1>Vite + React</h1> */}
       <PriceOptions></PriceOptions>
-      
+      <LineChart></LineChart>
+      <BarCart></BarCart>
     </>
   )
 }
