@@ -6,7 +6,6 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  LabelList,
 } from "recharts";
 // Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 const BarCart = () => {
